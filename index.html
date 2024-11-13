@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CHIPS STORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+  .swiper {
+      width: 85%;
+      margin-top: -1em;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 0 0;
+    }
+
+   
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 330px;
+      height: 400px;
+      object-fit: contain;
+      position: relative;
+      
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 33;
+     
+    }
+
+
+     .cc{
+        scale: .6;
+        transition: scale .4s;
+      }
+
+        .swiper-slide .leafimg{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf1{
+            top: 0.8em;
+            right: 0.8em;
+            z-index: 44;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf2{
+            position: absolute;
+            bottom: 0.5em;
+            left: 8px;
+            z-index: 66;
+            scale: 0;
+            transition: scale .4s .1s;
+    
+        }
+        
+        
+        :is(.swiper-slide-active) .cc{
+          scale: .9;
+        }
+        :is(.swiper-slide-active) .leaf1,
+        :is(.swiper-slide-active) .leaf2{
+          scale: 1;
+        }
+ @media (max-width: 830px){
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 370px;
+      object-fit: contain;
+      position: relative;
+    }
+    .cc{
+        scale: .6;
+        transition: scale .4s;
+      }
+
+        .swiper-slide .leafimg{
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf1{
+            top: 0.7em;
+            right: 0.8em;
+            z-index: 44;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf2{
+            position: absolute;
+            bottom: 0.5em;
+            left: 8px;
+            z-index: 66;
+            scale: 0;
+            transition: scale .4s .1s;
+    
+        }
+        
+        
+        :is(.swiper-slide-active) .cc{
+          scale: .9;
+        }
+        :is(.swiper-slide-active) .leaf1,
+        :is(.swiper-slide-active) .leaf2{
+          scale: 1;
+        }
+}
+@media (max-width: 550px){
+  .swiper {
+      width: 80%;
+      margin-top: -1em;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 0 0;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 170px;
+      height: 220px;
+      object-fit: contain;
+      position: relative;
+    }
+    .cc{
+        scale: .6;
+        transition: scale .4s;
+      }
+
+        .swiper-slide .leafimg{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf1{
+            top: 0.7em;
+            right: 0.8em;
+            z-index: 44;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf2{
+            position: absolute;
+            bottom: 0.5em;
+            left: 8px;
+            z-index: 66;
+            scale: 0;
+            transition: scale .4s .1s;
+    
+        }
+        
+        
+        :is(.swiper-slide-active) .cc{
+          scale: .9;
+        }
+        :is(.swiper-slide-active) .leaf1,
+        :is(.swiper-slide-active) .leaf2{
+          scale: 1;
+        }
+}
+@media (min-width: 1300px)
+{
+  .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 400px;
+      height: 470px;
+      object-fit: contain;
+      position: relative;
+    }
+    .cc{
+        scale: .6;
+        transition: scale .4s;
+      }
+
+        .swiper-slide .leafimg{
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf1{
+            top: 0.7em;
+            right: 0.6em;
+            z-index: 44;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf2{
+            position: absolute;
+            bottom: 0.5em;
+            left: 8px;
+            z-index: 66;
+            scale: 0;
+            transition: scale .4s .1s;
+    
+        }
+        
+        
+        :is(.swiper-slide-active) .cc{
+          scale: .9;
+        }
+        :is(.swiper-slide-active) .leaf1,
+        :is(.swiper-slide-active) .leaf2{
+          scale: 1;
+        }
+}
+@media (min-width: 1600px)
+{
+  .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 600px;
+      height: 670px;
+      object-fit: contain;
+      position: relative;
+    }
+    .cc{
+        scale: .6;
+        transition: scale .4s;
+      }
+
+        .swiper-slide .leafimg{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+        .leaf1{
+            top: 0.7em;
+            right: 1em;
+            z-index: 44;
+            scale: 0;
+            transition: scale .4s .1s;
+        }
+         .leaf2{
+            position: absolute;
+            bottom: 0.5em;
+            left: 8px;
+            z-index: 66;
+            scale: 0;
+            transition: scale .4s .1s;
+    
+        }
+        
+        
+        :is(.swiper-slide-active) .cc{
+          scale: .9;
+        }
+        :is(.swiper-slide-active) .leaf1,
+        :is(.swiper-slide-active) .leaf2{
+          scale: 1;
+        }
+}
+</style>
+<body>
+  <button class="btn">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+    <header>
+        <div class="logo">
+            <h3><a href="#home">CHIPS</a></h3>
+            <i class="fa-solid fa-bars" class="menu" id="menu"></i>
+            <i class="ri-close-line" id="close"></i>
+        </div>
+        <div class="right-contents">
+            <ul class="list">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#care">Care</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+    
+            <div class="social-media">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+        
+        <div class="right-contents-2">
+          <ul class="list-2" id="list">
+          <li><a href="#home" >Home</a></li>
+          <li><a href="#favorites" >Favorites</a></li>
+          <li><a href="#care" >Care</a></li>
+          <li><a href="#products" >Products</a></li>
+          <li><a href="#contact" >Contact</a></li>
+         </ul>
+         <div class="social-media-2">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+         </div>
+    </div>
+        
+        
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+           <div class="left-contents" data-aos="fade-down" data-aos-duration="1500">
+                <div class="content">
+                  <h3>SNACK <br>WITH NO <br>LIMITS</br></br></h3>
+                  <img src="img/meat.png" class="meatimg" alt="">
+                </div>
+                <div class="hero-paragragh">
+                   <p>When you are hungry and don't have time to cook, snacks are the perfect solution, always prepare for midday hungry</p>
+                </div>
+                <div class="buttons">
+                    <button>Snack Now</button>
+                    <button>Buy Now</button>
+                 </div>
+           </div>
+           <div class="right-content">
+                 <span class="span" data-aos="zoom-in" data-aos-duration="1000">
+                    <span></span>
+                    <div class="images">
+                      <img src="img/home-chips.png" class="home-chips" data-aos="fade-down" alt="">
+                    <img data-aos="fade-down" data-aos-duration="1500" class="image1 imgs" src="img/tomato-1.png" alt="image1"> -->
+                    <img data-aos="fade-up" data-aos-duration="1500"  class="image2 imgs" src="img/tomato-2.png" alt="">
+                    <img data-aos="fade-left" data-aos-duration="1200" class="image3 imgs" src="img/chips-1.png" alt="">
+                    <img data-aos="zoom-out" data-aos-duration="1200" class="image4 imgs" src="img/chips-2.png" alt="">
+                    <img data-aos="fade-down" data-aos-duration="1500" class="image5 imgs" src="img/chips-3.png" alt="">
+                    <img data-aos="zoom-in" data-aos-duration="1700" class="image6 imgs" src="img/leaf-3.png" alt="">
+                 
+                    </div>
+                    
+                 
+                 
+                </span>
+                 <!-- <img data-aos="fade-down" class="image1 imgs" src="img/tomato-1.png" alt="image1"> -->
+                 <!-- <img  class="image2 imgs" src="img/tomato-2.png" alt="">
+                 <img class="image3 imgs" src="img/chips-1.png" alt="">
+                 <img class="image4 imgs" src="img/chips-2.png" alt="">
+                 <img class="image5 imgs" src="img/chips-3.png" alt="">
+                 <img class="image6 imgs" src="img/leaf-3.png" alt=""> -->
+           </div>
+        </div>
+        
+    </section>
+
+    <section class="favorites" id="favorites" >
+        <!-- <img src="img/cheese.png" alt="cheese img"> -->
+        <h3 data-aos="fade-down" data-aos-duration="1000">DISCOVER YOUR <br>FAVORITE FLAVORS</br></h3>
+        <p data-aos="fade-down" data-aos-duration="1000">Try some exotic or delicious toppings. We have collected some delicious snack recipes from around the world for you</p>
+        <div class="swiper mySwiper" data-aos="fade-down" data-aos-duration="1000">
+            
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="cc" src="img/favorite-chips-1.png" />
+                <img class="leafimg leaf1" src="img/leaf-1.png" alt="">
+                <img class="leafimg leaf2" src="img/leaf-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="cc" src="img/favorite-chips-2.png" />
+                <img class="leafimg leaf1" src="img/leaf-1.png" alt="">
+                <img class="leafimg leaf2" src="img/leaf-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="cc" src="img/favorite-chips-3.png" />
+                <img class="leafimg leaf1" src="img/leaf-1.png" alt="">
+                <img class="leafimg leaf2" src="img/leaf-2.png" alt="">
+              </div>
+
+
+              <div class="swiper-slide">
+                <img class="cc" src="img/favorite-chips-1.png" />
+                <img class="leafimg leaf1" src="img/leaf-1.png" alt="">
+                <img class="leafimg leaf2" src="img/leaf-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="cc" src="img/favorite-chips-2.png" />
+                <img class="leafimg leaf1" src="img/leaf-1.png" alt="">
+                <img class="leafimg leaf2" src="img/leaf-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="cc" src="img/favorite-chips-3.png" />
+                <img class="leafimg leaf1" src="img/leaf-1.png" alt="">
+                <img class="leafimg leaf2" src="img/leaf-2.png" alt="">
+              </div>
+              
+            </div>
+          </div>
+    </section>
+
+    <section class="care" id="care">
+      <div class="container">
+        <div>
+          <h3>ENJOY AND TAKE <br>CARE OF YOUR HEALTH</br></h3>
+        </div>
+        <div class="bottom-content">
+          <div class="left-side" data-aos="fade-right" data-aos-duration="1000">
+            <img src="img/care-chips.png" alt="">
+          </div>
+          <div class="right-side" data-aos="fade-left" data-aos-duration="1000">
+            <div class="infos">
+              <i class="ri-plant-line"></i>
+              <p>The potatoes that are made into snacks are grown and harvested and are 100% organic.</p>
+            </div>
+            <div class="infos">
+              <i class="ri-fire-line"></i> 
+              <p>We try fries with vegetable and natural oil for good care.</p>       
+            </div>
+            <div class="infos">
+              <i class="ri-heart-pulse-line"></i>
+              <p>The potatoes are not processed once cleaned they are cooked without preservatives.</p>
+            </div>
+            <div class="infos">
+              <i class="ri-hand-heart-line"></i>
+              <p>They contain fewer calories and less fat for good health.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="products" id="products">
+      
+      <div class="container">
+        <h3>BEST SELLING<br>PRODUCT</br></h3>
+
+        <img class="crab" src="img/crab.png" alt="">
+        <img class="burger" src="img/hamburger.png" alt="">
+        <div class="product-box-container">
+          <div class="product-box" data-aos="fade-down" data-aos-duration="700">
+            <div class="img">
+               <img  src="img/product-chips-1.png" alt="">
+            </div>
+            <div class="box-content">
+              <h5>Crab</h5>
+              <h4>Chips</h4>
+              <h4 class="price">$8</h4>
+              <div class="cart">
+                <i class="ri-shopping-bag-3-line"></i>
+            </div>
+            </div>
+           
+            
+          </div>
+
+
+          <div class="product-box" data-aos="fade-down" data-aos-duration="900">
+            <div class="img">
+               <img  src="img/product-chips-2.png" alt="">
+            </div>
+            <div class="box-content">
+              <h5>cheese</h5>
+              <h4>Chips</h4>
+              <h4 class="price">$5</h4>
+              <div class="cart">
+                <i class="ri-shopping-bag-3-line"></i>            </div>
+            </div>
+           
+            
+          </div>
+
+
+
+
+          <div class="product-box" data-aos="fade-down" data-aos-duration="1200">
+            <div class="img">
+               <img  src="img/product-chips-3.png" alt="">
+            </div>
+            <div class="box-content">
+              <h5>BBQ</h5>
+              <h4>Chips</h4>
+              <h4 class="price">$6</h4>
+              <div class="cart">
+                <i class="ri-shopping-bag-3-line"></i>            </div>
+            </div>
+           
+            
+          </div>
+
+
+          <div class="product-box" data-aos="fade-down" data-aos-duration="1400">
+            <div class="img">
+               <img  src="img/product-chips-4.png" alt="">
+            </div>
+            <div class="box-content">
+              <h5>Hot</h5>
+              <h4>Chips</h4>
+              <h4 class="price">$5</h4>
+              <div class="cart">
+                <i class="ri-shopping-bag-3-line"></i>            </div>
+            </div>
+           
+            
+          </div>
+
+
+          <div class="product-box" data-aos="fade-down" data-aos-duration="1600">
+            <div class="img">
+               <img  src="img/product-chips-5.png" alt="">
+            </div>
+            <div class="box-content">
+              <h5>Mix</h5>
+              <h4>Chips</h4>
+              <h4 class="price">$10</h4>
+              <div class="cart">
+                <i class="ri-shopping-bag-3-line"></i>            </div>
+            </div>
+           
+            
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="up-content">
+          <h3>CONTACT US TO <br>EAT CHIPS</br></h3>
+        </div>
+          <div class="bottom-content">
+            <div class="first">
+              <div class="writeUs">
+                <h4>Write us</h4>
+                <div class="icons">
+                  <i class="ri-whatsapp-fill"></i>
+                  <i class="ri-messenger-fill"></i>
+                  <i class="ri-mail-fill"></i>
+                </div>
+              </div>
+              <div class="callUs">
+                <h4>Call us</h4>
+                <div class="numbers">
+                 <p>+00-987-7654-321</p>
+                 <p>+11-012345</p>
+                </div>
+              </div>
+            </div>
+            <div class="second">
+              <h4>Find us here</h4>
+              <p>Lima-Sun City - Peru <br>Av.Moon #4321</br></p>
+            </div>
+            
+          </div>
+      <div class="image" id="image">
+        <img src="img/contact-man.png" alt="">
+      </div>
+    </div>
+     
+    </section>
+    
+
+    <footer class="footer-1">
+      <div>
+        <h3>CHIPS</h3>
+      </div>
+      <div class="actions">
+        <div class="dii">
+          <p>Terms & Agreements</p>
+        <p>Privacy Policy</p></div>
+        
+        
+        <div class="div">
+          <div class="copyright">
+          <i class="ri-copyright-line"></i>
+          <p>All Rights Reserved By Bedimcode</p>
+        </div>
+        </div>
+        
+      </div>
+    </footer>
+    <footer class="footer-2">
+      <div>
+        <h3>CHIPS</h3>
+      </div>
+      <div class="actions">
+          <p>Terms & Agreements</p>
+          <div class="copyright">
+            <i class="ri-copyright-line"></i>
+            <p>All Rights Reserved By Bedimcode</p>
+          </div>
+      <p>Privacy Policy</p>
+
+      </div>
+
+    </footer>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>
+<script>
+    AOS.init();
+
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+        
+
+      },
+      loop: true,
+    });
+    
+    document.querySelectorAll('.swiper-slide').forEach(e => {
+    })
+    
+  </script>

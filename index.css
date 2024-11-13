@@ -1,0 +1,2881 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    /* outline: 3px solid red; */
+    /* outline: 4px solid red; */
+}
+
+.btn{
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    width: 20px;
+    height: 20px;
+    background: #008271;
+    outline: 0;
+    border: 0;
+    color: white;
+    z-index: 888;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 3px 0 #000;
+
+}
+.btn i{
+    font-size: 1em;
+}
+body{
+    background: #019f8a;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    background: #019f8a;
+    z-index: 1000;
+    box-shadow: 0px 0px 0px  #535353;
+}
+
+header .logo h3{
+    font-size: 2.2vw;
+    margin-left: 2em;
+    color: #fff;
+}
+header .logo h3 a{
+    text-decoration: none;
+    color: white;
+    transition: .2s;
+}
+header .logo #menu,
+header .logo #close{
+    display: none;
+}
+header .right-contents{
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 2.4em;
+    margin-right: 3em;
+}
+header .right-contents .list{
+     display: flex;
+     list-style: none;
+     column-gap: 3em;
+     justify-content: center;
+     flex-direction: row;
+     align-items: center;
+}
+header .right-contents .list li {
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+header .right-contents .list li a{
+    text-decoration: none;
+    color: white;
+    transition: .2s;
+}
+header .right-contents .social-media{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+header .right-contents .social-media i{
+    font-size: 1.4vw;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+header .right-contents .list li a.active{
+    color: #ffa200;
+}
+
+header .right-contents .list li a:hover,
+header .right-contents .social-media i:hover,
+header .logo h3 a:hover{
+    color: #ffa200;
+}
+
+.right-contents-2{
+    display: none;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    width: 90vw;
+    height: 100vh;
+    /* min-width: 10vw;
+    min-height: 10vh; */
+    max-width: 100vw;
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
+    margin-top: 3em;
+    place-items: center;
+}
+
+.hero .container .left-contents{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.9em;
+}
+.hero .container .left-contents .content{
+    position: relative;
+}
+h3{
+    font-family: "Titan One", sans-serif;
+    color: #fff;
+    /* font-size: 5vw; */
+    font-size: clamp(2rem, 4vw + 1rem , 5vw);
+    font-size: 5vw;
+    letter-spacing: 0.1em;
+}
+.hero .container .left-contents .content .meatimg{
+    width: 6%;
+    position: absolute;
+    top: 58%;
+    right: 46%;
+}
+.hero .container .left-contents .hero-paragragh{
+    margin-top: -4em;
+    width: 95%;
+}
+.hero .container .left-contents .hero-paragragh p{
+    /* font-size: clamp(0.2vw , 0.25vw + 1rem, 5vw); */
+    /* font-size: 1.5vw; */
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    color: white;
+    
+
+}
+.hero .container .left-contents .buttons{
+    display: flex;
+    column-gap: 1em;
+    /* margin-top: 1.4em; */
+}
+.hero .container .left-contents .buttons button{
+    width: 10rem;
+    height: 2rem;
+    min-width: 1rem;
+    min-height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-size: 1.2vw;
+    border-radius: 5em;
+}
+.hero .container .left-contents .buttons button:nth-child(1){
+    background: #ffa200;
+    border: 2px solid #ffa200;
+    color: #019f8a;
+    font-weight: bold;
+    cursor: pointer;
+}
+.hero .container .left-contents .buttons button:nth-child(2){
+    background: transparent;
+    border: 2px solid #ffa200;
+    color: #ffa200;
+    cursor: pointer;
+    font-weight: bold;
+}
+.hero .container .right-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .container .right-content .span{
+    width: 350px;
+    height: 350px;
+    
+    position: relative;
+    background: #00907d;
+    border-radius: 50%;
+    /* z-index: 55; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px #000;
+}
+.hero .container .right-content .span span{
+    width: 80%;
+    height: 80%;
+    background: #ffa200;
+    border-radius: 50%;
+    box-shadow: 0 0 4px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+.hero .container .right-content .span .home-chips{
+    width: 70%;
+    /* object-fit: contain; */
+    transform: rotate(15deg);
+    position: absolute;
+}
+.images
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .container .right-content .span .imgs{
+    position: absolute;
+    width: 10%;
+}
+.hero .container .right-content .span .image1{
+right: 12%;
+top: 6%;
+}
+
+.hero .container .right-content .span .image2{
+    top: 78%;
+    left: 20%;
+
+
+}
+.hero .container .right-content .span .image3{
+    right: 0;
+
+}
+.hero .container .right-content .span .image4{
+    right: 4%;
+    top: 75%;
+
+
+}
+.hero .container .right-content .span .image5{
+    left: 0;
+    top: 10%;
+
+
+}
+.hero .container .right-content .span .image6{
+    left: 6%;
+    bottom: 50%;
+    z-index: 199;
+    width: 3vw;
+    animation: image6 4s;
+
+}
+
+
+.favorites{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+    row-gap: 1.3em;
+    padding: 7em 0 0 0;
+}
+.favorites h3{
+    font-family: "Titan One", sans-serif;
+    color: white;
+    /* font-size: 2.4vw; */
+    text-align: center;
+}
+.favorites  p{
+    text-align: center;
+    /* font-size: 1.2em; */
+    width: 70%;
+    color: white;
+}
+
+.care{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    margin-top: 5em;
+    padding-bottom: 15em;
+
+}
+.care .container{
+    width: 85%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: clamp(10em, 12em,20em);
+    /* align-items: center; */
+    row-gap: 3em;
+}
+.care h3{
+    /* font-size: 2.4vw; */
+    display: flex;
+    text-align: center;
+    color: white;
+    font-family: "Titan One", sans-serif;
+}
+.care .bottom-content{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+justify-content: space-between;
+align-items: center;
+column-gap: 4em;
+row-gap: 3vh;
+}
+img{
+    width: 280px;
+
+}
+.care .right-side{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+.care .right-side .infos{
+    display: flex;
+    column-gap: 0.3em;
+    align-items: baseline;
+    
+}
+.care .right-side .infos i{
+    color: #ffa200;
+    font-size: 1.6em;
+}
+.care .right-side .infos p{
+    /* font-size: 1.3em; */
+    font-weight: 500;
+    color: white;
+}
+
+.products{
+    margin-top: 13em;
+    /* padding: 6em 0; */
+}
+
+.products h3{
+    
+    text-align: center;
+    /* font-size: 2.3em; */
+    color: white;
+    font-family: "Titan One", sans-serif;
+}
+.products .container{
+    position: relative;
+    /* margin-top: 20%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7em;
+}
+.crab{
+    position: absolute;
+    width: 45px;
+    left: 2em;
+    top: -9em;
+    transform: rotate(20deg);
+}
+.burger{
+    position: absolute;
+    width: 60px;
+    right: 8em;
+    top: 15em;
+    transform: rotate(-20deg);
+}
+.products .product-box-container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    row-gap: 7em;
+}
+.products .product-box{
+    width: 83%;
+    background: #008775d7;
+    color: white;
+    padding-bottom: 2em;
+    cursor: pointer;
+    box-shadow: 0 0 9px 0 #333;
+    border-radius:1em;
+}
+.products .product-box .box-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: 0.4em;
+    padding-left: 0.9em;
+    margin-top: -2.2em;
+
+}
+
+.products .product-box .img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.products .product-box .img img{
+    width: 130px;
+    translate: 0 -4.4em;
+    transition: .2s;
+}
+.products .product-box:hover img{
+    translate: 0 -5em;
+}
+.products .product-box h5{
+    font-size: 1em;
+    font-weight: 500;
+}
+.products .product-box h4{
+    font-size: 2em;
+    font-family: "Titan One", sans-serif;
+}
+.products .product-box h4.price{
+    font-size: 1.4em;
+}
+.products .product-box .cart{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffa200;
+    color: #019f8a;
+    border-radius: 0.2em;
+    position: absolute;
+    bottom: 0;
+    right: 0.7em
+}
+.products .product-box .cart i{
+    font-size: 1em;
+}
+
+.contact{
+    margin-top: 28em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6em;
+}
+.contact .container{
+    position: relative;
+    width: 80%;
+    height: fit-content;
+    background: #006558d7;
+    box-shadow: 0 0 3px 1px #333;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+    padding: 1em 0 0 0;
+    border-radius: 2em;
+}
+.contact .container h3{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-family: "Titan One", sans-serif;
+
+}
+
+.contact .container .bottom-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    row-gap: 2.6em;
+    margin-left: -11em;
+}
+.contact .container .bottom-content .first{
+    display: flex;
+    /* align-items: center; */
+    column-gap: 5em;
+
+}
+.contact .container .bottom-content .first .writeUs,
+.contact .container .bottom-content .first .callUs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3em;
+}
+.contact .container .bottom-content .first h4{
+    font-size: 1.4em;
+    text-align: left;
+    font-family: "Titan One", sans-serif;
+    letter-spacing: 0.1em;
+    
+}
+.contact .container .bottom-content .first .icons{
+    display: flex;
+    column-gap: 0.8em;
+}
+.contact .container .bottom-content .first i{
+    font-size: 1.4em;
+    color: #ffa200;
+    cursor: pointer;
+}
+
+.contact .container .bottom-content .first p{
+    font-size: 0.9em;
+}
+.contact .container .bottom-content .second{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2em;
+}
+.contact .container .bottom-content .second h4{
+    font-size: 1.4em;
+    font-family: "Titan One", sans-serif;
+    letter-spacing: 0.1em;
+}
+.contact .container .bottom-content .second p {
+    font-size: 1em;
+    letter-spacing: 0.2em;
+}
+
+.image img{
+    width: 220px;
+    position: absolute;
+    bottom: 0;
+    right: 4em;
+}
+.footer-1{
+    display: none;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5em;
+    margin-top: 4em;
+    padding-bottom: 0.5em;
+}
+footer h3{
+    font-family: "Titan One", sans-serif;
+    color: white;
+    font-size: 1.8em;
+}
+footer .actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 8em;
+}
+footer .actions p{
+    font-size: 1.2em;
+    color: white;
+}
+footer .actions .copyright{
+    display: flex;
+    align-items: center;
+    column-gap: 0.2em;
+}
+footer .actions .copyright i{
+    font-size: 1.2em;
+    color: #fff;
+}
+header .logo #menu{
+    display: none;
+    color: #fff;
+}
+
+.list-2{
+    display: none;
+}
+
+/* ======================== IPAD PRO RESPONSIVE ============================= */
+@media (max-width: 1024px) and (min-height: 1365px) and (max-height: 1367px) {
+    
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header .logo{
+        width: 100%;
+    }
+   
+    header .logo h3{
+        font-size: 4vw;
+        margin-left: 1em;
+        
+        color: #fff;
+    }
+  
+    header .right-contents{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding-left: 1.5em;
+        display: none;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        padding-left: 1.5em;
+    }
+    header .right-contents .list{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        row-gap: 7em;
+        justify-content: start;
+        align-items: start;
+        text-align: left;
+        position: relative;
+        padding: 10em 8em;
+        padding-left: 1.5em;
+
+   }
+   header .right-contents .list li {
+       font-size: 4vw;
+       font-weight: bold;
+       letter-spacing: 0.2em;
+   }
+   
+   header .right-contents .list li a{
+       text-decoration: none;
+       color: white;
+       transition: .2s;
+   }
+   header .right-contents .social-media{
+       position: absolute;
+       bottom: 1em;
+       right: 1em;
+       display: flex;
+       gap: 3em;
+       /* margin-right: 1em; */
+   }
+   header .right-contents .social-media i{
+       font-size: 3vw;
+       color: #fff;
+       cursor: pointer;
+       transition: .2s;
+   }
+   header .right-contents .list li a.active{
+       color: #ffa200;
+   }
+   
+   header .right-contents .list li a:hover,
+   header .right-contents .social-media i:hover,
+   header .logo h3 a:hover{
+       color: #ffa200;
+   }
+   
+    .container{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 9em;
+        row-gap: 4em;
+    }
+    .hero .container .left-contents .content{
+        position: relative;
+    }
+   
+    .hero .container .left-contents .content{
+    position: relative;
+}
+h3{
+    font-family: "Titan One", sans-serif;
+    color: #fff;
+    /* font-size: 5vw; */
+    font-size: clamp(2rem, 4vw + 1rem , 5vw);
+    font-size: 5vw;
+    letter-spacing: 0.1em;
+}
+.hero .container .left-contents .content .meatimg{
+    width: 9%;
+    position: absolute;
+    top: 58%;
+    right: 11%;
+}
+    .buttons{
+    justify-content: center;
+    align-items: center;
+    }
+    .hero .container .left-contents .buttons button{
+        width: 13rem;
+        height: 3rem;
+        min-width: 1rem;
+        min-height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        font-size: 2.5vw;
+        border-radius: 5em;
+    }
+    .hero .container .left-contents{
+        width: 90%;
+        height: 90%;
+        gap: 2.5em;
+    }
+    .hero .container .right-content{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .container .right-content .span{
+        width: 450px;
+        height: 450px;
+        
+        position: relative;
+        background: #00907d;
+        border-radius: 50%;
+        /* z-index: 55; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 4px #000;
+    }
+    .hero .container .right-content .span span{
+        width: 80%;
+        height: 80%;
+        background: #ffa200;
+        border-radius: 50%;
+        box-shadow: 0 0 4px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    
+    }
+    .hero .container .right-content .span .home-chips{
+        width: 70%;
+        /* object-fit: contain; */
+        transform: rotate(15deg);
+        position: absolute;
+    }
+    .images
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero .container .right-content .span .imgs{
+        position: absolute;
+        width: 10%;
+    }
+    .hero .container .right-content .span .image1{
+    right: 15%;
+    top: 9%;
+    }
+   
+    .hero .container .right-content .span .image2{
+        top: 76%;
+        left: 20%;
+    
+    
+    }
+    .hero .container .right-content .span .image3{
+        right: 0;
+    
+    }
+    .hero .container .right-content .span .image4{
+        right: 4%;
+        top: 75%;
+    
+    
+    }
+    .hero .container .right-content .span .image5{
+        left: 0;
+        top: 10%;
+    }
+    .favorites{
+        margin-top: 20em;
+    }
+    .care{
+        margin-top: 15em;
+    }
+    .care .bottom-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+    }
+    .care .bottom-content .left-side{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .care img{
+        width: 40vw;
+        display: grid;
+        place-items: center;
+    }
+    .care .right-side p
+    {
+        text-align: left;
+    }
+    .products{
+        margin-top: 1em;
+        padding: 6em 0;
+    }
+    .products .product-box-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .contact{
+        margin-top: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6em;
+    }
+    .contact .container{
+        position: relative;
+        width: 80%;
+        height: fit-content;
+        background: #006558d7;
+        box-shadow: 0 0 3px 1px #333;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4em;
+        padding: 3em 0 23em 0;
+        border-radius: 2em;
+    }
+    .contact .container h3{
+        text-align: center;
+        color: white;
+        font-size: 5vw;
+        font-family: "Titan One", sans-serif;
+    
+    }
+    
+    .contact .container .bottom-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        row-gap: 2.6em;
+        margin-left: 0;
+    }
+    .contact .container .bottom-content .first{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* align-items: center; */
+        row-gap: 5em;
+    
+    }
+    .contact .container .bottom-content .first .writeUs,
+    .contact .container .bottom-content .first .callUs{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.7em;
+    }
+    .contact .container .bottom-content .first h4{
+        font-size: 4vw;
+        text-align: center;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+        
+    }
+    .contact .container .bottom-content .first .icons{
+        display: flex;
+        column-gap: 1em;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .container .bottom-content .first i{
+        font-size: 1.6em;
+        color: #ffa200;
+        cursor: pointer;
+    }
+    
+    .contact .container .bottom-content .first p{
+        /* font-size: 0.9em; */
+    }
+    .contact .container .bottom-content .second{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.4em;
+    }
+    .contact .container .bottom-content .second h4{
+        font-size: 4vw;
+        text-align: center;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+    }
+    .contact .container .bottom-content .second p {
+        /* font-size: 1em; */
+        text-align: center;
+
+        letter-spacing: 0.2em;
+    }
+    .contact .container #image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
+    }
+    .contact .container #image img{
+        width: 300px;
+        position: absolute;
+        bottom: 0;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1.5em;
+        margin-top: 4em;
+        padding-bottom: 0.5em;
+    }
+    footer h3{
+        font-family: "Titan One", sans-serif;
+        color: white;
+        font-size: 1.8em;
+    }
+    footer .actions{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 8em;
+    }
+    footer .actions p{
+        font-size: 0.3em;
+        color: white;
+    }
+    footer .actions .copyright{
+        display: flex;
+        align-items: center;
+        column-gap: 0.2em;
+    }
+    footer .actions .copyright i{
+        font-size: 1.2em;
+        color: #fff;
+    }
+
+    h3{
+        font-size: 7vw;
+    }
+   
+    
+    p{
+        font-size: 3vw;
+    }
+     h3,p{
+        text-align: center;
+    }
+    .left-contents h3{
+        font-size: 11vw;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .logo #menu{
+        display: flex;
+        color: #fff;
+        position: absolute;
+        right: 1.5em;
+        font-size: 3.5vw;
+        cursor: pointer;
+    }
+    #close{
+        display: none;
+        color: #fff;
+        position: absolute;
+        right: 1em;
+        font-size: 4.5vw;
+        font-weight: bold;
+        cursor: pointer;    
+    }
+    
+}
+/* ============================ TABLET RESPONSIVE ========================================= */
+@media (max-width: 890px){
+    body{
+        /* background: #000; */
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header .logo{
+        width: 100%;
+    }
+   
+    header .logo h3{
+        font-size: 4vw;
+        margin-left: 1em;
+        
+        color: #fff;
+    }
+  
+    header .right-contents{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding-left: 1.5em;
+        display: none;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        padding-left: 1.5em;
+    }
+    header .right-contents .list{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        row-gap: 7em;
+        justify-content: start;
+        align-items: start;
+        text-align: left;
+        position: relative;
+        padding: 10em 8em;
+        padding-left: 1.5em;
+
+   }
+   header .right-contents .list li {
+       font-size: 4vw;
+       font-weight: bold;
+       letter-spacing: 0.2em;
+   }
+   
+   header .right-contents .list li a{
+       text-decoration: none;
+       color: white;
+       transition: .2s;
+   }
+   header .right-contents .social-media{
+       position: absolute;
+       bottom: 1em;
+       right: 1em;
+       display: flex;
+       gap: 3em;
+       /* margin-right: 1em; */
+   }
+   header .right-contents .social-media i{
+       font-size: 3vw;
+       color: #fff;
+       cursor: pointer;
+       transition: .2s;
+   }
+   header .right-contents .list li a.active{
+       color: #ffa200;
+   }
+   
+   header .right-contents .list li a:hover,
+   header .right-contents .social-media i:hover,
+   header .logo h3 a:hover{
+       color: #ffa200;
+   }
+   
+    .container{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 9em;
+        row-gap: 4em;
+    }
+    .hero .container .left-contents .content{
+        position: relative;
+    }
+   
+    .hero .container .left-contents .content{
+    position: relative;
+}
+h3{
+    font-family: "Titan One", sans-serif;
+    color: #fff;
+    /* font-size: 5vw; */
+    font-size: clamp(2rem, 4vw + 1rem , 5vw);
+    font-size: 5vw;
+    letter-spacing: 0.1em;
+}
+.hero .container .left-contents .content .meatimg{
+    width: 9%;
+    position: absolute;
+    top: 58%;
+    right: 11%;
+}
+    .buttons{
+    justify-content: center;
+    align-items: center;
+    }
+    .hero .container .left-contents .buttons button{
+        width: 13rem;
+        height: 3rem;
+        min-width: 1rem;
+        min-height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        font-size: 2.5vw;
+        border-radius: 5em;
+    }
+    .hero .container .left-contents{
+        width: 90%;
+        height: 90%;
+        gap: 2.5em;
+    }
+    .hero .container .right-content{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .container .right-content .span{
+        width: 450px;
+        height: 450px;
+        
+        position: relative;
+        background: #00907d;
+        border-radius: 50%;
+        /* z-index: 55; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 4px #000;
+    }
+    .hero .container .right-content .span span{
+        width: 80%;
+        height: 80%;
+        background: #ffa200;
+        border-radius: 50%;
+        box-shadow: 0 0 4px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    
+    }
+    .hero .container .right-content .span .home-chips{
+        width: 70%;
+        /* object-fit: contain; */
+        transform: rotate(15deg);
+        position: absolute;
+    }
+    .images
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero .container .right-content .span .imgs{
+        position: absolute;
+        width: 10%;
+    }
+    .hero .container .right-content .span .image1{
+    right: 15%;
+    top: 9%;
+    }
+   
+    .hero .container .right-content .span .image2{
+        top: 76%;
+        left: 20%;
+    
+    
+    }
+    .hero .container .right-content .span .image3{
+        right: 0;
+    
+    }
+    .hero .container .right-content .span .image4{
+        right: 4%;
+        top: 75%;
+    
+    
+    }
+    .hero .container .right-content .span .image5{
+        left: 0;
+        top: 10%;
+    }
+    .favorites{
+        margin-top: 20em;
+    }
+    .care{
+        margin-top: 15em;
+    }
+    .care .bottom-content .left-side{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .care img{
+        width: 40vw;
+        display: grid;
+        place-items: center;
+    }
+    .care .right-side p
+    {
+        text-align: left;
+    }
+    .products{
+        margin-top: 1em;
+        padding: 6em 0;
+    }
+    .products .product-box-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .contact{
+        margin-top: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6em;
+    }
+    .contact .container{
+        position: relative;
+        width: 80%;
+        height: fit-content;
+        background: #006558d7;
+        box-shadow: 0 0 3px 1px #333;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4em;
+        padding: 3em 0 23em 0;
+        border-radius: 2em;
+    }
+    .contact .container h3{
+        text-align: center;
+        color: white;
+        font-size: 5vw;
+        font-family: "Titan One", sans-serif;
+    
+    }
+    
+    .contact .container .bottom-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        row-gap: 2.6em;
+        margin-left: 0;
+    }
+    .contact .container .bottom-content .first{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* align-items: center; */
+        row-gap: 5em;
+    
+    }
+    .contact .container .bottom-content .first .writeUs,
+    .contact .container .bottom-content .first .callUs{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.7em;
+    }
+    .contact .container .bottom-content .first h4{
+        font-size: 4vw;
+        text-align: center;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+        
+    }
+    .contact .container .bottom-content .first .icons{
+        display: flex;
+        column-gap: 0.8em;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .container .bottom-content .first i{
+        /* font-size: 1.4em; */
+        color: #ffa200;
+        cursor: pointer;
+    }
+    
+    .contact .container .bottom-content .first p{
+        /* font-size: 0.9em; */
+    }
+    .contact .container .bottom-content .second{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.4em;
+    }
+    .contact .container .bottom-content .second h4{
+        font-size: 4vw;
+        text-align: center;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+    }
+    .contact .container .bottom-content .second p {
+        /* font-size: 1em; */
+        text-align: center;
+
+        letter-spacing: 0.2em;
+    }
+    .contact .container #image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
+    }
+    .contact .container #image img{
+        width: 300px;
+        position: absolute;
+        bottom: 0;
+    }
+    .footer-1{
+        display: none;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1.5em;
+        margin-top: 4em;
+        padding-bottom: 0.5em;
+    }
+    footer h3{
+        font-family: "Titan One", sans-serif;
+        color: white;
+        font-size: 1.8em;
+    }
+    footer .actions{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 8em;
+    }
+    footer .actions p{
+        font-size: 0.3em;
+        color: white;
+    }
+    footer .actions .copyright{
+        display: flex;
+        align-items: center;
+        column-gap: 0.2em;
+    }
+    footer .actions .copyright i{
+        font-size: 1.2em;
+        color: #fff;
+    }
+
+    h3{
+        font-size: 7vw;
+    }
+   
+    
+    p{
+        font-size: 3vw;
+    }
+     h3,p{
+        text-align: center;
+    }
+    .left-contents h3{
+        font-size: 11vw;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .logo #menu{
+        display: flex;
+        color: #fff;
+        position: absolute;
+        right: 1.5em;
+        font-size: 3.5vw;
+        cursor: pointer;
+    }
+    #close{
+        display: none;
+        color: #fff;
+        position: absolute;
+        right: 1em;
+        font-size: 4.5vw;
+        font-weight: bold;
+        cursor: pointer;    
+    }
+}
+/* ================================= SMALL DEVICES RESPONSIVE ================================ */
+@media (max-width: 550px)
+{
+    header .logo h3{
+        font-size: 5vw;
+        margin-left: 1em;
+        color: #fff;
+    }
+  
+    header .right-contents .list{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        row-gap: 5em;
+        justify-content: start;
+        align-items: start;
+        text-align: left;
+        position: relative;
+        padding: 5em 8em;
+        padding-left: 1em;
+
+   }
+   header .right-contents .list li {
+       font-size: 5vw;
+       font-weight: bold;
+       letter-spacing: 0.2em;
+   }
+   
+   header .right-contents .list li a{
+       text-decoration: none;
+       color: white;
+       transition: .2s;
+   }
+   header .right-contents .social-media{
+       position: absolute;
+       bottom: 4em;
+       right: 2em;
+       display: flex;
+       align-items: center;
+       gap: 3em;
+   }
+   header .right-contents .social-media i{
+       font-size: 4vw;
+       color: #fff;
+       cursor: pointer;
+       transition: .2s;
+   }
+   header .right-contents .list li a.active{
+       color: #ffa200;
+   }
+   
+   header .right-contents .list li a:hover,
+   header .right-contents .social-media i:hover,
+   header .logo h3 a:hover{
+       color: #ffa200;
+   }
+   header .logo #menu{
+    font-size: 4.5vw;
+   }
+   header .logo #close{
+    font-size: 7vw;
+    right: 0.9em
+   }
+
+    .container{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70%;
+        row-gap: 3em;
+    }
+    .hero .container .left-contents .content .meatimg{
+        width: 9%;
+        position: absolute;
+        top: 58%;
+        right: 12%;
+    }
+    .hero .container .right-content .span{
+        width: 280px;
+        height: 280px;
+        
+        position: relative;
+        background: #00907d;
+        border-radius: 50%;
+        /* z-index: 55; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 4px #000;
+    }
+    .hero .container .left-contents .buttons button{
+        width: 10rem;
+        height: 2rem;
+        min-width: 1rem;
+        min-height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        font-size: 3.5vw;
+        border-radius: 5em;
+    }
+    .favorites{
+        margin-top: 10em;
+    }
+    .care{
+        margin-top: 2em;
+    }
+    .products{
+        margin-top: 20em;
+        padding: 6em 0;
+    }
+    .products .product-box-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .products .product-box-container .product-box{
+        width: 79%;
+    }
+    .products .product-box-container .product-box img{
+        width: 50%;
+    }
+    .contact{
+        margin-top: 35rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6em;
+    }
+    .contact .container{
+        position: relative;
+        width: 80%;
+        height: fit-content;
+        background: #006558d7;
+        box-shadow: 0 0 3px 1px #333;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4em;
+        padding: 3em 0 12em 0;
+        border-radius: 2em;
+    }
+    .contact .container h3{
+        text-align: center;
+        color: white;
+        font-size: 5vw;
+        font-family: "Titan One", sans-serif;
+    
+    }
+    
+    .contact .container .bottom-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        row-gap: 2.6em;
+        margin-left: 0;
+    }
+    .contact .container .bottom-content .first{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* align-items: center; */
+        row-gap: 2em;
+    
+    }
+    .contact .container .bottom-content .first .writeUs,
+    .contact .container .bottom-content .first .callUs{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.3em;
+    }
+    .contact .container .bottom-content .first h4{
+        /* font-size: 1.4em; */
+        text-align: center;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+        
+    }
+    .contact .container .bottom-content .first .icons{
+        display: flex;
+        column-gap: 0.8em;
+    }
+    .contact .container .bottom-content .first i{
+        font-size: 4vw;
+        color: #ffa200;
+        cursor: pointer;
+    }
+    
+    .contact .container .bottom-content .first p{
+        /* font-size: 0.9em; */
+    }
+    .contact .container .bottom-content .second{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.2em;
+    }
+    .contact .container .bottom-content .second h4{
+        /* font-size: 1.4em; */
+        text-align: center;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+    }
+    .contact .container .bottom-content .second p {
+        /* font-size: 1em; */
+        text-align: center;
+
+        letter-spacing: 0.2em;
+    }
+    .contact .container #image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
+    }
+    .contact .container #image img{
+        width: 170px;
+        position: absolute;
+        bottom: 0;
+    }
+    h3{
+        font-size: 7vw;
+    }
+        .left-contents h3{
+            font-size: 10vw;
+        }
+        
+         h3,p{
+            text-align: center;
+        }  
+}
+@media (max-height: 490px)
+{
+    header .right-contents .list{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        row-gap: 3em;
+        justify-content: start;
+        align-items: start;
+        text-align: left;
+        position: relative;
+        padding: 3em 8em;
+        padding-left: 1em;
+
+   }
+   header .right-contents .list li {
+       font-size: 4vw;
+       font-weight: bold;
+       letter-spacing: 0.2em;
+   }
+   
+   header .right-contents .list li a{
+       text-decoration: none;
+       color: white;
+       transition: .2s;
+   }
+   header .right-contents .social-media{
+       position: absolute;
+       bottom: 4em;
+       right: 2em;
+       display: flex;
+       align-items: center;
+       gap: 3em;
+   }
+   header .right-contents .social-media i{
+       font-size: 3vw;
+       color: #fff;
+       cursor: pointer;
+       transition: .2s;
+   }
+   header .right-contents .list li a.active{
+       color: #ffa200;
+   }
+   
+   header .right-contents .list li a:hover,
+   header .right-contents .social-media i:hover,
+   header .logo h3 a:hover{
+       color: #ffa200;
+   }
+   header .logo #menu{
+    font-size: 4.5vw;
+   }
+   header .logo #close{
+    font-size: 5.5vw;
+    right: 0.9em
+   }
+ .container{
+    margin-top: 100%;
+ }
+ .favorites{
+    margin-top: 19em;
+ }
+ .care{
+    margin-top: 1em;
+ }
+ .products{
+    margin-top: 17em;
+ }
+ .contact{
+    margin-top: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6em;
+}
+.contact .container{
+    position: relative;
+    width: 80%;
+    height: fit-content;
+    background: #006558d7;
+    box-shadow: 0 0 3px 1px #333;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4em;
+    padding: 3em 0 12em 0;
+    border-radius: 2em;
+}
+.contact .container h3{
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+    font-family: "Titan One", sans-serif;
+
+}
+
+.contact .container .bottom-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    row-gap: 2.6em;
+    margin-left: 0;
+}
+.contact .container .bottom-content .first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+    row-gap: 2em;
+
+}
+.contact .container .bottom-content .first .writeUs,
+.contact .container .bottom-content .first .callUs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3em;
+}
+.contact .container .bottom-content .first h4{
+    font-size: 5vw;
+    text-align: center;
+    font-family: "Titan One", sans-serif;
+    letter-spacing: 0.1em;
+    
+}
+.contact .container .bottom-content .first .icons{
+    display: flex;
+    column-gap: 0.8em;
+}
+.contact .container .bottom-content .first i{
+    font-size: 2vw;
+    color: #ffa200;
+    cursor: pointer;
+}
+
+.contact .container .bottom-content .second{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2em;
+}
+.contact .container .bottom-content .second h4{
+    /* font-size: 1.4em; */
+    text-align: center;
+    font-family: "Titan One", sans-serif;
+    letter-spacing: 0.1em;
+}
+.contact .container .bottom-content .second p {
+    /* font-size: 1em; */
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+.contact .container #image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+.contact .container #image img{
+    width: 160px;
+    position: absolute;
+    bottom: 0;
+    right: 3em;
+}
+}
+/* ================================== LARGE DEVICES RESPONSIVE ===================================== */
+@media (min-width: 1300px)
+{
+    header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.7rem 0;
+        background: #019f8a;
+        z-index: 1000;
+        box-shadow: 0px 0px 0px  #535353;
+    }
+    
+    header .logo h3{
+        font-size: 1.5vw;
+        margin-left: 2em;
+        color: #fff;
+    }
+    header .logo h3 a{
+        text-decoration: none;
+        color: white;
+        transition: .2s;
+    }
+    header .logo #menu,
+    header .logo #close{
+        display: none;
+    }
+    header .right-contents{
+        display: flex;
+        /* justify-content: space-evenly; */
+        align-items: center;
+        gap: 2.4em;
+        margin-right: 3em;
+    }
+    header .right-contents .list{
+         display: flex;
+         list-style: none;
+         column-gap: 3em;
+         justify-content: center;
+         flex-direction: row;
+         align-items: center;
+    }
+    header .right-contents .list li {
+        font-size: 1.2vw;
+        font-weight: bold;
+    }
+    
+    header .right-contents .list li a{
+        text-decoration: none;
+        color: white;
+        transition: .2s;
+    }
+    header .right-contents .social-media{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    header .right-contents .social-media i{
+        font-size: 1.4vw;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s;
+    }
+    header .right-contents .list li a.active{
+        color: #ffa200;
+    }
+    
+    header .right-contents .list li a:hover,
+    header .right-contents .social-media i:hover,
+    header .logo h3 a:hover{
+        color: #ffa200;
+    }
+    
+    .right-contents-2{
+        display: none;
+    }
+    .hero{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .container{
+        width: 90vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
+        margin-top: 3em;
+        place-items: center;
+    }
+    
+    .hero .container .left-contents{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 0.9em;
+    }
+    .hero .container .left-contents .content{
+        position: relative;
+    }
+    h3{
+        font-family: "Titan One", sans-serif;
+        color: #fff;
+        font-size: clamp(2rem, 4vw + 1rem , 5vw);
+        font-size: 5vw;
+        letter-spacing: 0.1em;
+    }
+    .hero .container .left-contents .content .meatimg{
+        width: 6%;
+        position: absolute;
+        top: 58%;
+        right: 46%;
+    }
+    .hero .container .left-contents .hero-paragragh{
+        margin-top: -4em;
+        width: 95%;
+    }
+    .hero .container .left-contents .hero-paragragh p{
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        color: white;
+        
+    
+    }
+    .hero .container .left-contents .buttons{
+        display: flex;
+        column-gap: 1em;
+        margin-top: 2em;
+    }
+    .hero .container .left-contents .buttons button{
+        width: 12rem;
+        height: 3rem;
+        min-width: 1rem;
+        min-height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        font-size: 1.2vw;
+        border-radius: 5em;
+    }
+    .hero .container .left-contents .buttons button:nth-child(1){
+        background: #ffa200;
+        border: 2px solid #ffa200;
+        color: #019f8a;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .hero .container .left-contents .buttons button:nth-child(2){
+        background: transparent;
+        border: 2px solid #ffa200;
+        color: #ffa200;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .hero .container .right-content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .container .right-content .span{
+        width: 450px;
+        height: 450px;
+        position: relative;
+        background: #00907d;
+        border-radius: 50%;
+        /* z-index: 55; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 4px #000;
+    }
+    .hero .container .right-content .span span{
+        width: 80%;
+        height: 80%;
+        background: #ffa200;
+        border-radius: 50%;
+        box-shadow: 0 0 4px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    
+    }
+    .hero .container .right-content .span .home-chips{
+        width: 70%;
+        /* object-fit: contain; */
+        transform: rotate(15deg);
+        position: absolute;
+    }
+    .images
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero .container .right-content .span .imgs{
+        position: absolute;
+        width: 10%;
+    }
+    .hero .container .right-content .span .image1{
+    right: 12%;
+    top: 6%;
+    }
+    
+    .hero .container .right-content .span .image2{
+        top: 78%;
+        left: 20%;
+    
+    
+    }
+    .hero .container .right-content .span .image3{
+        right: 0;
+    
+    }
+    .hero .container .right-content .span .image4{
+        right: 4%;
+        top: 75%;
+    
+    
+    }
+    .hero .container .right-content .span .image5{
+        left: 0;
+        top: 10%;
+    
+    
+    }
+    .hero .container .right-content .span .image6{
+        left: 6%;
+        bottom: 50%;
+        z-index: 199;
+        width: 3vw;
+        animation: image6 4s;
+    
+    }
+   
+    .favorites{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10em;
+        row-gap: 1.3em;
+        padding: 7em 0 0 0;
+    }
+    .favorites h3{
+        font-family: "Titan One", sans-serif;
+        color: white;
+        text-align: center;
+    }
+    .favorites  p{
+        margin-top: 1em;
+        text-align: center;
+        width: 80%;
+        color: white;
+        padding-bottom: 2em;
+    }
+    .care{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        margin-top: 5em;
+        padding-bottom: 15em;
+    
+    }
+    .care .container{
+        width: 85%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: clamp(10em, 12em,20em);
+        row-gap: 3em;
+    }
+    .care h3{
+        display: flex;
+        text-align: center;
+        color: white;
+        font-family: "Titan One", sans-serif;
+    }
+    .care .bottom-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 4em;
+    row-gap: 3vh;
+    margin-top: 3em;
+    }
+    .care .bottom-content .left-side{
+        display: flex;
+        justify-content: center;
+
+    }
+    img{
+        width: 350px;
+    
+    }
+    .care .right-side{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+    .care .right-side .infos{
+        display: flex;
+        column-gap: 0.5em;
+        align-items: baseline;
+        
+    }
+    .care .right-side .infos i{
+        color: #ffa200;
+        font-size: 1.6em;
+    }
+    .care .right-side .infos p{
+        /* font-size: 1.3em; */
+        font-weight: 500;
+        color: white;
+    }
+    .products{
+        margin-top: 13em;
+        /* padding: 6em 0; */
+    }
+    
+    .products h3{
+        
+        text-align: center;
+        color: white;
+        font-family: "Titan One", sans-serif;
+    }
+    .products .container{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 7em;
+    }
+    .crab{
+        position: absolute;
+        width: 45px;
+        left: 2em;
+        top: -9em;
+        transform: rotate(20deg);
+    }
+    .burger{
+        position: absolute;
+        width: 60px;
+        right: 8em;
+        top: 15em;
+        transform: rotate(-20deg);
+    }
+    .products .product-box-container{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-items: center;
+        row-gap: 7em;
+        margin-top: 3em;
+    }
+    .products .product-box{
+        width: 83%;
+        background: #008775d7;
+        color: white;
+        padding-bottom: 2em;
+        cursor: pointer;
+        box-shadow: 0 0 9px 0 #333;
+        border-radius:1em;
+    }
+    .products .product-box .box-content{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        row-gap: 0.4em;
+        padding-left: 0.9em;
+        margin-top: -2.2em;
+    
+    }
+    
+    .products .product-box .img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .products .product-box .img img{
+        width: 160px;
+        translate: 0 -4.4em;
+        transition: .2s;
+    }
+    .products .product-box:hover img{
+        translate: 0 -5em;
+    }
+    .products .product-box h5{
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    .products .product-box h4{
+        font-size: 3em;
+        font-family: "Titan One", sans-serif;
+    }
+    .products .product-box h4.price{
+        font-size: 1.8em;
+    }
+    .products .product-box .cart{
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffa200;
+        color: #019f8a;
+        border-radius: 0.2em;
+        position: absolute;
+        bottom: 0;
+        right: 0.7em
+    }
+    .products .product-box .cart i{
+        font-size: 1em;
+    }
+    .contact{
+        margin-top: 28em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6em;
+    }
+    .contact .container{
+        position: relative;
+        width: 80%;
+        height: fit-content;
+        background: #006558d7;
+        box-shadow: 0 0 3px 1px #333;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3em;
+        padding: 1em 0 0 0;
+        border-radius: 2em;
+    }
+    .contact .container h3{
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        font-family: "Titan One", sans-serif;
+    }
+    
+    .contact .container .bottom-content{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        row-gap: 2.6em;
+        margin-left: -11em;
+    }
+    .contact .container .bottom-content .first{
+        display: flex;
+        column-gap: 5em;
+    
+    }
+    .contact .container .bottom-content .first .writeUs,
+    .contact .container .bottom-content .first .callUs{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.3em;
+    }
+    .contact .container .bottom-content .first h4{
+        font-size: 2em;
+        text-align: left;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+        
+    }
+    .contact .container .bottom-content .first .icons{
+        display: flex;
+        column-gap: 0.8em;
+    }
+    .contact .container .bottom-content .first i{
+        font-size: 1.6em;
+        color: #ffa200;
+        cursor: pointer;
+    }
+    
+    .contact .container .bottom-content .first p{
+        font-size: 1em;
+    }
+    .contact .container .bottom-content .second{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.2em;
+    }
+    .contact .container .bottom-content .second h4{
+        font-size: 2em;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+    }
+    .contact .container .bottom-content .second p {
+        font-size: 1em;
+        letter-spacing: 0.2em;
+    }
+    
+    .image img{
+        width: 250px;
+        position: absolute;
+        bottom: 0;
+        right: 4em;
+    }
+    p{
+        font-size: 1.5vw;
+        letter-spacing: 0.3em;
+    }
+}
+@media (min-width: 1600px)
+{
+    header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.7rem 0;
+        background: #019f8a;
+        z-index: 1000;
+        box-shadow: 0px 0px 0px  #535353;
+    }
+    
+    header .logo h3{
+        font-size: 1.5vw;
+        margin-left: 2em;
+        color: #fff;
+    }
+    header .logo h3 a{
+        text-decoration: none;
+        color: white;
+        transition: .2s;
+    }
+    header .logo #menu,
+    header .logo #close{
+        display: none;
+    }
+    header .right-contents{
+        display: flex;
+        align-items: center;
+        gap: 2.4em;
+        margin-right: 3em;
+    }
+    header .right-contents .list{
+         display: flex;
+         list-style: none;
+         column-gap: 3em;
+         justify-content: center;
+         flex-direction: row;
+         align-items: center;
+    }
+    header .right-contents .list li {
+        font-size: 1.2vw;
+        font-weight: bold;
+    }
+    
+    header .right-contents .list li a{
+        text-decoration: none;
+        color: white;
+        transition: .2s;
+    }
+    header .right-contents .social-media{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    header .right-contents .social-media i{
+        font-size: 1.4vw;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s;
+    }
+    header .right-contents .list li a.active{
+        color: #ffa200;
+    }
+    
+    header .right-contents .list li a:hover,
+    header .right-contents .social-media i:hover,
+    header .logo h3 a:hover{
+        color: #ffa200;
+    }
+    
+    .right-contents-2{
+        display: none;
+    }
+    .hero{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .container{
+        width: 90vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
+        margin-top: 3em;
+        place-items: center;
+    }
+    
+    .hero .container .left-contents{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 0.9em;
+    }
+    .hero .container .left-contents .content{
+        position: relative;
+    }
+    h3{
+        font-family: "Titan One", sans-serif;
+        color: #fff;
+        font-size: clamp(2rem, 4vw + 1rem , 5vw);
+        font-size: 5vw;
+        letter-spacing: 0.1em;
+    }
+    .hero .container .left-contents .content .meatimg{
+        width: 6%;
+        position: absolute;
+        top: 58%;
+        right: 46%;
+    }
+    .hero .container .left-contents .hero-paragragh{
+        margin-top: -4em;
+        width: 95%;
+    }
+    .hero .container .left-contents .hero-paragragh p{
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        color: white;
+        
+    
+    }
+    .hero .container .left-contents .buttons{
+        display: flex;
+        column-gap: 1em;
+        margin-top: 3em;
+    }
+    .hero .container .left-contents .buttons button{
+        width: 17rem;
+        height: 5rem;
+        min-width: 1rem;
+        min-height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        font-size: 1.5vw;
+        border-radius: 5em;
+    }
+    .hero .container .left-contents .buttons button:nth-child(1){
+        background: #ffa200;
+        border: 2px solid #ffa200;
+        color: #019f8a;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .hero .container .left-contents .buttons button:nth-child(2){
+        background: transparent;
+        border: 2px solid #ffa200;
+        color: #ffa200;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .hero .container .right-content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .container .right-content .span{
+        width: 650px;
+        height: 650px;
+        position: relative;
+        background: #00907d;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 4px #000;
+    }
+    .hero .container .right-content .span span{
+        width: 80%;
+        height: 80%;
+        background: #ffa200;
+        border-radius: 50%;
+        box-shadow: 0 0 4px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    
+    }
+    .hero .container .right-content .span .home-chips{
+        width: 70%;
+        /* object-fit: contain; */
+        transform: rotate(15deg);
+        position: absolute;
+    }
+    .images
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero .container .right-content .span .imgs{
+        position: absolute;
+        width: 10%;
+    }
+    .hero .container .right-content .span .image1{
+    right: 12%;
+    top: 6%;
+    }
+    
+    .hero .container .right-content .span .image2{
+        top: 78%;
+        left: 20%;
+    
+    
+    }
+    .hero .container .right-content .span .image3{
+        right: 0;
+    
+    }
+    .hero .container .right-content .span .image4{
+        right: 4%;
+        top: 75%;
+    
+    
+    }
+    .hero .container .right-content .span .image5{
+        left: 0;
+        top: 10%;
+    
+    
+    }
+    .hero .container .right-content .span .image6{
+        left: 6%;
+        bottom: 50%;
+        z-index: 199;
+        width: 3vw;
+        animation: image6 4s;
+    
+    }
+   
+    .favorites{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20em;
+        row-gap: 1.3em;
+        padding: 7em 0 0 0;
+    }
+    .favorites h3{
+        font-family: "Titan One", sans-serif;
+        color: white;
+        text-align: center;
+    }
+    .favorites  p{
+        margin-top: 1em;
+        text-align: center;
+        width: 80%;
+        color: white;
+        padding-bottom: 2em;
+    }
+    .care{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        margin-top: 19em;
+        padding-bottom: 15em;
+    
+    }
+    .care .container{
+        width: 85%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: clamp(10em, 12em,20em);
+        row-gap: 3em;
+    }
+    .care h3{
+        display: flex;
+        text-align: center;
+        color: white;
+        font-family: "Titan One", sans-serif;
+    }
+    .care .bottom-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 4em;
+    row-gap: 3vh;
+    margin-top: 3em;
+    }
+    .care .bottom-content .left-side{
+        display: flex;
+        justify-content: center;
+
+    }
+    img{
+        width: 550px;
+    
+    }
+    .care .right-side{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+    .care .right-side .infos{
+        display: flex;
+        column-gap: 0.7em;
+        align-items: baseline;
+        
+    }
+    .care .right-side .infos i{
+        color: #ffa200;
+        font-size: 2.5em;
+    }
+    .care .right-side .infos p{
+        /* font-size: 1.3em; */
+        font-weight: 500;
+        color: white;
+    }
+    .products{
+        margin-top: 40em;
+        /* padding: 6em 0; */
+    }
+    
+    .products h3{
+        
+        text-align: center;
+        color: white;
+        font-family: "Titan One", sans-serif;
+    }
+    .products .container{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 7em;
+    }
+    .crab{
+        position: absolute;
+        width: 45px;
+        left: 2em;
+        top: -9em;
+        transform: rotate(20deg);
+    }
+    .burger{
+        position: absolute;
+        width: 60px;
+        right: 8em;
+        top: 15em;
+        transform: rotate(-20deg);
+    }
+    .products .product-box-container{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-items: center;
+        row-gap: 16em;
+        margin-top: 5em;
+    }
+    .products .product-box{
+        width: 87%;
+        background: #008775d7;
+        color: white;
+        padding-bottom: 2em;
+        cursor: pointer;
+        box-shadow: 0 0 9px 0 #333;
+        border-radius:1em;
+    }
+    .products .product-box .box-content{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        row-gap: 0.4em;
+        padding-left: 0.9em;
+        margin-top: -2.2em;
+    
+    }
+    
+    .products .product-box .img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .products .product-box .img img{
+        width: 250px;
+        translate: 0 -7em;
+        transition: .2s;
+    }
+    .products .product-box:hover img{
+        translate: 0 -5em;
+    }
+    .products .product-box h5{
+        font-size: 2em;
+        font-weight: 500;
+    }
+    .products .product-box h4{
+        font-size: 4em;
+        font-family: "Titan One", sans-serif;
+    }
+    .products .product-box h4.price{
+        font-size: 2.5em;
+    }
+    .products .product-box .cart{
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffa200;
+        color: #019f8a;
+        border-radius: 0.2em;
+        position: absolute;
+        bottom: 0;
+        right: 0.7em
+    }
+    .products .product-box .cart i{
+        font-size: 1.5em;
+    }
+    .contact{
+        margin-top: 50em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6em;
+    }
+    .contact .container{
+        position: relative;
+        width: 80%;
+        height: fit-content;
+        background: #006558d7;
+        box-shadow: 0 0 3px 1px #333;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4em;
+        padding: 2em 0 0 0;
+        border-radius: 2em;
+    }
+    .contact .container h3{
+        text-align: center;
+        color: white;
+        font-size: 5em;
+        font-family: "Titan One", sans-serif;
+    }
+    
+    .contact .container .bottom-content{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        row-gap: 2.6em;
+        margin-left: -11em;
+    }
+    .contact .container .bottom-content .first{
+        display: flex;
+        column-gap: 7em;
+    
+    }
+    .contact .container .bottom-content .first .writeUs,
+    .contact .container .bottom-content .first .callUs{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.3em;
+    }
+    .contact .container .bottom-content .first h4{
+        font-size: 3em;
+        text-align: left;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+        
+    }
+    .contact .container .bottom-content .first .icons{
+        display: flex;
+        column-gap: 0.8em;
+    }
+    .contact .container .bottom-content .first i{
+        font-size: 2.5em;
+        color: #ffa200;
+        cursor: pointer;
+    }
+    
+    .contact .container .bottom-content .first p{
+        font-size: 1.7em;
+    }
+    .contact .container .bottom-content .second{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.2em;
+    }
+    .contact .container .bottom-content .second h4{
+        font-size: 3em;
+        font-family: "Titan One", sans-serif;
+        letter-spacing: 0.1em;
+    }
+    .contact .container .bottom-content .second p {
+        font-size: 1.7em;
+        letter-spacing: 0.2em;
+    }
+    
+    .image img{
+        width: 350px;
+        position: absolute;
+        bottom: 0;
+        right: 4em;
+    }
+    p{
+        font-size: 1.8vw;
+        letter-spacing: 0.3em;
+    }
+}
